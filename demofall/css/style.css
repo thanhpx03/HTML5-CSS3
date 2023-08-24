@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.menu ul {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu ul li a {
+    padding: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: 0.5px solid #FFFFFF;
+    font-weight: 400;
+}
+
+.menu ul li a:hover {
+    color: red;
+}
+
+.banner {
+    padding: 10px;
+}
+
+.banner a img {
+    width: 100%;
+    height: 700px;
+}
+
+.content {
+    padding: 30px 10px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+.titles a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.titles a h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+}
+
+.titles p {
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #14274A;
+}
+
+.titles button {
+    width: 236px;
+    height: 63px;
+    background: #E0B973;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background: #132F66;
+}
+
+@media(max-width:1024px) and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        padding: 10px;
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .menu ul {
+        padding: 30px;
+        display: block;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    .menu ul li a {
+        padding: 0 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        border: 0.5px solid #FFFFFF;
+        font-weight: 400;
+    }
+
+    .menu ul li a:hover {
+        color: red;
+    }
+
+    .banner {
+        padding: 10px;
+    }
+
+    .banner a img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .content {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .box {
+        display: block;
+        padding: 0;
+    }
+
+    .img a img {
+        width: 100%;
+    }
+
+    .titles a {
+        text-decoration: none;
+        color: black;
+        padding-bottom: 5px;
+    }
+
+    .titles a h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+    }
+
+    .titles p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #14274A;
+    }
+
+    .titles button {
+        width: 150px;
+        height: 40px;
+        background: #E0B973;
+        border: 1px solid white;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+    }
+
+    footer {
+        width: 100%;
+        height: 80px;
+        background: #132F66;
+    }
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo a img {
+        width: 100px;
+        height: 30px;
+    }
+    .menu {
+        display: block;
+    }
+
+    .banner a img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .box {
+        display: block;
+        padding: 10px 0px;
+
+    }
+
+    .img {
+        display: block;
+    }
+
+    .img a img {
+        width: 100%;
+    }
+
+    .titles a h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+    }
+
+    .titles p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #14274A;
+        padding: 10px 0px;
+    }
+
+    .titles button {
+        width: 150px;
+        height: 40px;
+        background: #E0B973;
+        border: 1px solid white;
+        border-radius: 2px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+    }
+
+    footer {
+        width: 100%;
+        height: 80px;
+        background: #132F66;
+    }
+}

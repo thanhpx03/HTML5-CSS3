@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="contaiter">
+        <header>
+            <div class="logo">
+                <img src="./img/image 20.png" alt="">
+            </div>
+            <div class="menu" id="menu1">
+                <ul>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">game</a></li>
+                    <li><a href="#">game</a></li>
+                    <li><a href="#">game</a></li>
+                    <li><a href="#">game</a></li>
+                    <li><a href="#">game</a></li>
+                </ul>
+                <img src="./img/mobile-menu.png" alt="" class="imgmobile">
+                <a href="javascript:void(0);" class="icon" onclick="menu()"> <i class="fa fa-bars"></i></a>
+
+            </div>
+        </header>
+        <div class="banner">
+            <img src="./img/image 45.jpg" alt="">
+        </div>
+        <div class="td">
+            <div class="tieude">
+                <h1>diana</h1>
+            </div>
+            <div class="div">
+                ádfkdkfdlfljlf
+            </div>
+        </div>
+        <div class="nd">
+            <div class="nd1">
+                <div class="img">
+                    <img src="./img/image 46.jpg" alt="">
+                </div>
+                <div class="doanvan">
+                    <div class="td1">
+                        game
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit harum magnam tenetur
+                        aliquam debitis in quo provident? Odio consequatur repellendus accusantium voluptate libero
+                        iusto expedita, enim aliquam ipsam molestiae.</p>
+                </div>
+            </div>
+            <div class="nd1">
+                <div class="img">
+                    <img src="./img/image 46.jpg" alt="">
+                </div>
+                <div class="doanvan">
+                    <div class="td1">
+                        game
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit harum magnam tenetur
+                        aliquam debitis in quo provident? Odio consequatur repellendus accusantium voluptate libero
+                        iusto expedita, enim aliquam ipsam molestiae.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="div">
+                ádsljvkjslvlsjsjvlsl
+            </div>
+            <form action="" onsubmit="return kiemtra()" name="form">
+                <div class="btn">
+                    <input type="text" name="ten"> <button type="submit">đăng kí</button>
+                    <p id="loiten" style="color: red;"></p>
+                </div>
+            </form>
+        </footer>
+    </div>
+    <script>
+
+        function kiemtra() {
+            var ten = document.form.ten.value;
+            var ok = true;
+            var check = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            if (ten == "") {
+                document.getElementById("loiten").innerHTML = "k dk rong ten ";
+                ok = false;
+            } else if (!ten.match(check)) {
+                document.getElementById("loiten").innerHTML = "k dung định dạng";
+                ok = false;
+
+            } else {
+                document.getElementById("loiten").innerHTML = "";
+            } if (ok) {
+                alert("dang ki thanh công");
+                return true;
+            } else return false;
+        }
+    </script>
+    <script>
+        function menu() {
+            var x = document.getElementById("menu1");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

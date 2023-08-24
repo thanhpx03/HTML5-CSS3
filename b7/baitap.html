@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .product {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+  </style>
+<body>
+    <div class="product"></div>
+
+    <script>
+        const products= [
+        {
+            id:1,
+            name:"iPhone ",
+            image:"https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg "
+            },
+            {
+            id:2,
+            name:"xiaoMi ",
+            image:"https://image.cellphones.com.vn/358x/media/catalog/product/x/i/xiaomi-12-pro_arenamobiles.jpg "
+            },
+            {
+            id:3,
+            name:"samsung ",
+            image:"https://image.cellphones.com.vn/358x/media/catalog/product/g/a/galaxy-z-fold3-kv_5g__1p_cmyk_1.jpg "
+            }
+           ];
+           const productDiv = document.querySelector(".product");
+for (let item of products) {
+ console.log(item.name);
+
+ productDiv.innerHTML += `
+     <div class="item">
+         <h2>${item.name}</h2>
+         <img src="${item.image}">
+     </div>
+ `;
+}
+
+// console.log(products);
+
+    </script>
+    
+</body>
+</html>

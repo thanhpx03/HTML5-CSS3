@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tong1 {
+            border: 1px solid gray;
+            height: 470px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .dangky h2 {
+            color: rgb(90, 166, 141);
+
+        }
+
+        .dangky input {
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+        }
+
+        .dangky input:focus {
+            border: 1.5px solid orange;
+            outline: none;
+        }
+
+        .gt input {
+            height: 12px;
+            width: 20px;
+        }
+
+        .dangky button {
+            width: 260px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            background-color: rgb(90, 166, 141);
+            color: white;
+            margin-top: 20px;
+
+
+        }
+
+        .dangky button:hover {
+            background-color: bisque;
+            color: black;
+        }
+
+        .dangky p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <a onclick="hienthi()"><img src="../image/account.png" alt=""></a>
+    <div class="" id="khac">
+        <form action="" name="formdk" onsubmit="return kiemtra()">
+            <div class="tong1">
+                <div class="dangky">
+                    <h2>Đăng ký tài khoản</h2>
+                    <div>
+                        <input type="text" placeholder="Họ" name="ho">
+                        <p id="loiho" style="color: red;"></p>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Tên" name="ten">
+                        <p id="loiten" style="color: red;"></p>
+                    </div>
+                    <div class="gt">
+                        <label for=""><input type="radio" name="gioitinh" id="">Nam </label>
+                        <label for=""><input type="radio" name="gioitinh" id="">Nữ </label>
+                        <p id="loigioitinh" style="color: red;"></p>
+                    </div>
+                    <div class="email">
+                        <input type="text" placeholder="Nhập email" name="email">
+                        <p id="loiemail" style="color: red;"></p>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Nhập mật khẩu mới" name="mkmoi">
+                        <p id="loimkmoi" style="color: red;"></p>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Nhập lại mật khẩu mới" name="nhaplaimkmoi">
+                        <p id="loinhaplai" style="color: red;"></p>
+                    </div>
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+    <script>
+        function kiemtra() {
+            var ok = true;
+            var ho = document.formdk.ho.value;
+            if (ho == "") {
+                document.getElementById("loiho").innerHTML = "Không được để trống";
+                ok = false;
+            } else {
+                document.getElementById("loiho").innerHTML = "";
+            }
+
+            var ten = document.formdk.ten.value;
+            if (ten == "") {
+                document.getElementById("loiten").innerHTML = "Không được để trống";
+                ok = false;
+            } else {
+                document.getElementById("loiten").innerHTML = "";
+            }
+
+            var email = document.formdk.email.value;
+            var regemail = /\w+@\w+(\.\w+){1,2}$/;
+            if (email == "") {
+                document.getElementById("loiemail").innerHTML = "Không được để trống";
+                ok = false;
+            } else if (!email.match(regemail)) {
+                document.getElementById("loiemail").innerHTML = "Không đúng định dạng";
+                ok = false;
+            }
+            else {
+                document.getElementById("loiemail").innerHTML = "";
+            }
+
+            var mkmoi = document.formdk.mkmoi.value;
+            var regmkmoi = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+            var nhaplaimkmoi = document.formdk.nhaplaimkmoi.value;
+            if (mkmoi == "") {
+                document.getElementById("loimkmoi").innerHTML = "Không được để trống";
+                ok = false;
+            } else if (!mkmoi.match(regmkmoi)) {
+                document.getElementById("loimkmoi").innerHTML = "Mật khẩu phải có ít nhất:  một ký tự viết hoa, một ký tự số và mật khẩu tổi thiểu 8 ký tự";
+                ok = false;
+            } else {
+                document.getElementById("loimkmoi").innerHTML = "";
+
+            }
+
+            if (nhaplaimkmoi == "") {
+                document.getElementById("loinhaplai").innerHTML = "Không được để trống";
+                ok = false;
+            } else if (nhaplaimkmoi !== mkmoi) {
+                document.getElementById("loinhaplai").innerHTML = "Mật khẩu không trúng khớp";
+                ok = false;
+            } else {
+                document.getElementById("loinhaplai").innerHTML = "";
+            }
+
+
+
+
+
+            if (ok) {
+                alert("Đăng ký thành công");
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        document.getElementById("khac").style.display = "none";
+        function hienthi() {
+            var khac = document.getElementById("khac");
+            if (khac.style.display == "block") {
+                khac.style.display = "none";
+            } else {
+                khac.style.display = "block";
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 1150px;
+    height: 2000px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+header{
+    padding-left: 20px;
+}
+header img{
+   float: left;
+   width: 100px;
+   
+}
+form{
+    float: left;
+    padding-left: 40px;
+}
+input{
+    height: 35px;
+    width: 650px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+input:focus{
+    outline: none;
+    border: 1.5px solid blueviolet;
+    font-weight: bold;
+}
+button{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 60px;
+    margin-left: 10px;
+    
+}
+button:hover{
+    background-color: bisque;
+}
+.click{
+    float: left;
+    margin-top: 30px;
+    padding-left: 50px;
+   
+    
+}
+.click2{
+   float: left;
+   margin-top: 30px;
+   padding-left: 30px;
+  
+  
+}
+nav{
+   text-align: center;
+   height: 50px;
+   background-color: rgb(226, 226, 226);
+   width: 1150px;
+  
+}
+nav ul li{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid gray;
+    height: 40px;
+    padding-top: 10px;
+    margin-top: 5px;
+    width: 170px;
+    border-radius: 5px;
+    border: 1px solid gray;
+   
+}
+nav li a{
+    text-decoration: none;
+    padding: 40px;
+    color: black;
+}
+nav ul li:hover{
+    background-color: bisque;
+}
+article{
+    width: 800px;
+}
+
+th img{
+    width: 20px;
+}
+
+
+
+footer{
+    float: left;
+    text-align: justify;
+    width: 1150px;
+    background-color: rgb(226, 226, 226);
+   
+}
+.f1, .f2, .f3, .f4{
+    height: 200px;
+}
+.f1{
+    float: left;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.f2{
+    float: left;
+    padding-left: 100px;
+    padding-top: 10px;
+
+}
+
+.f2 li a{
+    text-decoration: none;
+    color: black;
+}
+.f3{
+    float: left;
+    padding-left: 100px;
+    padding-top: 10px;
+}
+.f2 li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.f3 li a{
+    text-decoration: none;
+    color: black;
+}
+.f3 li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.f4{
+    float: left;
+    padding-left: 90px;
+    padding-top: 10px;
+}
+.f4 li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.f4 li a{
+    text-decoration: none;
+    color: black;
+}
+h5{
+    text-align: center;
+    width: 1150px;
+}

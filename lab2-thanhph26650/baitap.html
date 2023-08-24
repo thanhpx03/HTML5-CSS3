@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lĩnh ơi anh yêu em</title>
+</head>
+
+<body>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid red;
+      border-collapse: collapse;
+    }
+  </style>
+  </head>
+
+  <body>
+    <!-- <h2 id="username"></h2> -->
+    <div class="info"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Stt</th>
+          <th>em yêu</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <br>
+    <form action="" onsubmit="return addUser()">
+      <div>
+        nhap ten <input type="text" class="txtten">
+        <p id="loiten" style="color:red"></p>
+      </div>
+      <div class="xoa">
+        xoa trong mang <input type="text" class="xoa">
+      </div>
+     
+      <div class="button">
+        <button class="btn" type="submit">submit</button>
+      </div>
+    </form>
+
+   
+    <script>
+      const userList = ["linhcute@fpt.edu.vn", "datlt@fpt.edu.vn"];
+      const tbody = document.querySelector("tbody");
+
+      function showMessage(message) {
+        document.querySelector(".show-error").innerHTML = message;
+      }
+      function showUser() {
+        if (userList.length == 0) {
+          showMessage("Không có dữ liệu hiển thị");
+        } else {
+          userList.forEach(function (value, index) {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${value}</td>
+                </tr>
+            `;
+          });
+        }
+      }
+
+      var btn = document.querySelector(".btn");
+      btn.onclick = function addUser(e) {
+        e.preventDefault();
+        var ten = document.querySelector(".txtten").value;
+        var check = true;
+        if (ten.length == 0) {
+          document.getElementById("loiten").innerHTML = "k duoc de trong";
+          check = false;
+        } else if (ten.length < 5) {
+          document.getElementById("loiten").innerHTML = "ten phai co 5 ky tu";
+          check = false;
+        } else {
+          document.getElementById("loiten").innerHTML = "";
+        }
+        if (check) {
+          userList.push(ten);
+          showUser();
+          return true;
+        }
+        else
+          return false;
+
+
+      }
+      addUser();
+      
+     
+
+    </script>
+  </body>
+
+</html>

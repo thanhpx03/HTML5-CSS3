@@ -1,0 +1,133 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contaiter{
+    width: 1440px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+    grid-gap: 32px;
+}
+ul li{
+    display: inline-block;
+
+}
+a{
+    text-decoration: none;
+    padding: 0 30px;
+}
+.banner{
+    width: 100%;
+}
+.nd1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 32px;
+    margin-top: 40px;
+}
+.nd3 p{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+@media(max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .contaiter{
+      width: auto;
+       
+    }
+    header{
+        display: flex;
+      justify-content: space-between;
+      align-items: center;
+        grid-gap: 12px;
+    }
+    ul li{
+        display: inline-block;
+    
+    }
+    a{
+        text-decoration: none;
+        padding: 0 10px;
+    }
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+    .nd1 img {
+        width: 100%;
+        height: auto;
+       
+    }
+    .nd1{
+        display: block;
+    }
+    
+    .nd3 p{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    button{
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+}
+@media(max-width:1080px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .contaiter{
+      width: 1080px;
+        margin: 0 auto;
+    }
+    header{
+        display: flex;
+      justify-content: space-between;
+      align-items: center;
+        grid-gap: 32px;
+    }
+    ul li{
+        display: inline-block;
+    
+    }
+    a{
+        text-decoration: none;
+        padding: 0 30px;
+    }
+    
+    .nd1 img {
+        width: 100%;
+    }
+    
+    .nd3 p{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    button{
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+}
+
+}

@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'robto';
+    font-weight: bold;
+    line-height:23px;
+    font-style: normal;
+
+    
+
+}
+.contaiter{
+    margin: 0 auto;
+    width: 1440px;
+}
+.logo {
+    text-align: center;
+
+}
+.menu{
+    text-align:center;
+}
+.imgmobile {
+    display:none;
+}
+ul li {
+    display: inline-block;
+}
+ul li  a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    color: black;
+    
+ 
+}
+ul li a:hover{
+    color: red;
+    text-decoration: underline;
+
+}
+.banner{
+    width: 100%;
+}
+.td{
+    text-align: center;
+    margin: 15px 15px;
+}
+.nd1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 32px;
+}
+.doanvan{
+   margin: auto 0px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 60px;
+    color: azure;
+}
+.btn{
+    margin: 0 15px;
+}
+@media(max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'robto';
+        font-weight: bold;
+        line-height:23px;
+        font-style: normal;
+    
+    }
+    .contaiter{
+        margin: 0 auto;
+        width: auto;
+       
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo img{
+       width: auto;
+       height: 30px;
+       margin: 10px;
+    }
+    .menu ul li{
+      display: none;
+    }
+    .imgmobile {
+        display:block;
+    }
+    .menu a:not(:first-child ){
+        display: none;
+    }
+    .menu a.iconmenu{
+        float: right;
+        display: block;
+    }
+    .menu.responsive {
+        position: relative;
+    }
+    .menu.responsive.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul li  a{
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 10px;
+        color: black;
+    }
+    ul li a:hover{
+        color: red;
+        text-decoration: underline;
+    }
+    .banner img{
+        width: 100%;
+        height: 200px;
+    }
+    .td{
+        text-align: center;
+        margin: 15px 15px;
+    }
+    .nd1{
+        display: block;
+    }
+    .img img{
+        width: 100%;
+        height: 200px;
+    }
+    .doanvan{
+       margin: auto 0px;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        height: 60px;
+        color: azure;
+    }
+    .input {
+        width: auto;
+        height: 20px;
+    }
+    .btn button{
+        margin: 0 15px;
+        width: auto;
+        height: 20px;
+    }
+}
+@media(max-width:1024px) and (min-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'robto';
+        font-weight: bold;
+        line-height:23px;
+        font-style: normal;
+    }
+    .contaiter{
+        margin: 0 auto;
+        width: auto;
+    }
+    .logo {
+        text-align: center;
+    }
+    .menu{
+        text-align:center;
+    }
+    .imgmobile {
+        display:none;
+    }
+    ul li {
+        display: inline-block;
+    }
+    ul li  a{
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 20px;
+        color: black;
+    }
+    ul li a:hover{
+        color: red;
+        text-decoration: underline;
+    
+    }
+    .banner img{
+        width: 100%;
+        height: 300px;
+    }
+    .td{
+        text-align: center;
+        margin: 15px 15px;
+    }
+    .nd{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-gap: 20px;
+    }
+    .nd1 img{
+        width: auto;
+        height: 200px;
+    }
+    .nd1{
+      display: block;
+    }
+    .doanvan{
+       margin: auto 0px;
+    }
+    footer{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        height: 60px;
+        color: azure;
+    }
+    .btn{
+        margin: 0 15px;
+    }
+}

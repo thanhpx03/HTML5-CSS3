@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <label for="">Email</label>
+        <input type="text" name="" id="name" placeholder="Hay nhap email cua ban">
+        <p class="errEmail" style="color: red"></p>
+        <button type="submit" id="btn">Login</button>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            var email = document.getElementById("name").value;
+            var err = document.querySelector(".errEmail");
+            var regEmail = /^\w+@(\w+\.\w+){1,2}$/;
+            if (email == 0) {
+                err.innerHTML = "Email khong duoc de rong";
+            }
+            else if (!email.match(regEmail)) {
+                err.innerHTML = "Email khong dung dinh dang";
+            } else {
+                err.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

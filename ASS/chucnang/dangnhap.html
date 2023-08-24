@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tong{
+            border: 1px solid gray;
+            width: 300px;
+            height: 320px;
+        }
+        .dangnhap{
+            text-align: center; 
+        }
+        .dangnhap h2{
+            color: rgb(90, 166, 141);
+        }
+        .dangnhap p{
+            color: rgb(90, 166, 141);
+        }
+        .dangnhap input{
+            width: 250px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid black;   
+        }
+        .dangnhap input:focus{
+            outline: none;
+            border: 1.5px solid orange;
+        }
+        .dangnhap button{
+            margin-top: 15px;
+            height: 35px;
+            width: 260px;
+            background-color: rgb(90, 166, 141);
+            border-radius: 5px;
+            border: 1px solid black;
+            color: white;   
+        }
+        .dangnhap button:hover{
+            background-color:bisque;
+            color: black;
+        }
+        .them{
+           margin-left: -20px;   
+        }
+        .them ul li{
+            display: inline-block;
+        }
+        .them li a{
+            text-decoration: none;
+            color: rgb(90, 166, 141);
+        }
+        .them li a:hover{
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- <img src="image/new1.webp" width="100px" id="hinh" alt="">
+    <script>
+        var dt = new Image();
+        var nk = new Image();
+        document.body.onload = function () {         
+                dt.src = "image/new1.webp";
+                nk.src = "image/new2.webp";
+        }     
+        var hinh = document.querySelector("#hinh");
+        hinh.onmouseover = function () {
+            hinh.src = dt.src;
+        }
+        hinh.onmouseout = function () {
+            hinh.src = nk.src;
+        }
+    </script> -->
+
+   <a onclick="hienthi()"><img src="../image/account.png" alt=""></a> 
+    <div  id="khac">
+        <div class="tong">
+            <div class="dangnhap">
+                <h2>Đăng nhập tài khoản</h2>
+                <p>Nhập tên đăng nhập và mật khẩu</p>
+                <input type="text" placeholder="Email">
+                <br>
+                <input type="password" placeholder="Mật khẩu"> <br>
+                <button >Đăng nhập</button>
+                <br>
+            </div>
+            <div class="them">
+                <ul>
+                    <li>Bạn chưa có tài khoản?<a href=""> Đăng ký ngay!</a></li> <br>
+                    <li>Quên mật khẩu?<a href=""> Khôi phục mật khẩu</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    
+    </div>
+    
+    <script>
+        document.getElementById("khac").style.display="none";
+        function hienthi(){
+            var khac= document.getElementById("khac");
+            if(khac.style.display=="block"){
+                khac.style.display="none";
+            }else{
+                khac.style.display="block";
+            }
+           
+        }
+    </script>
+
+    
+
+</body>
+
+</html>

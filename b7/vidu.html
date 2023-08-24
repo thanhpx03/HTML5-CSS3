@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .product {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+  </style>
+<body>
+    <div class="product"></div>
+    <!-- <script>
+        const iphone= {
+            color:"black",
+            size: "3ich",
+            brand:"appte",
+            phonecall: function(){
+                console.log("ban dag goi dien thoai");
+            }
+
+        }
+        console.log("");
+    </script>
+     -->
+
+     <!-- product 
+     id    name 
+     1     xaomi
+     2     samsunng -->
+
+     <script>
+         const products= [
+             {
+                 id:1,
+                 name: "iphone"
+
+             },
+             {
+                 id:2,
+                 name:"sam sung"
+             }
+            ];
+            const productDiv = document.querySelector(".product");
+for (let item of products) {
+  console.log(item.name);
+  productDiv.innerHTML += `
+      <div class="item">
+          <h2>${item.name}</h2>
+      </div>
+  `;
+}
+
+// console.log(products);
+
+     </script>
+</body>
+</html>
